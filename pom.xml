@@ -16,11 +16,10 @@
 
     <packaging>pom</packaging>
     <modules>
-        <module>stage01-singleton-pattern</module>
-        <module>stage02-factory-pattern</module>
-        <module>stage03-observer-pattern</module>
-        <module>stage04-strategy-pattern</module>
         <module>common</module>
+        <module>stage01-create</module>
+        <module>stage02-struct</module>
+        <module>stage03-behavior</module>
     </modules>
 
     <properties>

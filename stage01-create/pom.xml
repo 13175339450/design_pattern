@@ -9,20 +9,20 @@
         <version>1.0.1</version>
     </parent>
 
-    <artifactId>strategy-pattern</artifactId>
+    <packaging>pom</packaging>
+
+    <artifactId>create</artifactId>
+
+    <modules>
+        <module>1-singleton-pattern</module>
+        <module>2-prototype-pattern</module>
+        <module>3-factory-pattern</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.hxl.design.pattern</groupId>
-            <artifactId>common</artifactId>
-            <version>1.0.1</version>
-        </dependency>
-    </dependencies>
 
 </project>
