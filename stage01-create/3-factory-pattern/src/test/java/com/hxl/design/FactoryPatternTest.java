@@ -3,6 +3,10 @@ package com.hxl.design;
 import com.hxl.design.entity.Plane;
 import com.hxl.design.entity.common.Enemy;
 import com.hxl.design.simple.SimpleEnemyFactory;
+import com.hxl.design.snacks.DumplingsFactory;
+import com.hxl.design.snacks.FrenchFriesFactory;
+import com.hxl.design.snacks.entity.FrenchFries;
+import com.hxl.design.snacks.entity.Snack;
 import com.hxl.design.standard.PlaneFactory;
 import com.hxl.design.standard.TankFactory;
 import org.junit.jupiter.api.Test;
@@ -50,6 +54,25 @@ public class FactoryPatternTest {
         for (int i = 0; i < 5; i++) {
             Enemy plane = planeFactory.getEnemy(screenWidth);
             plane.show();
+        }
+    }
+
+    /**
+     * 测试工厂模式（标准）
+     * 自定义小吃
+     */
+    @Test
+    public void testSnackFactory() {
+        DumplingsFactory dumplingsFactory = new DumplingsFactory();
+        for (int i = 0; i < 5; i++) {
+            Snack dumplings = dumplingsFactory.getSnack();
+            dumplings.create();
+        }
+
+        FrenchFriesFactory frenchFriesFactory = new FrenchFriesFactory();
+        for (int i = 0; i < 5; i++) {
+            Snack frenchFries = frenchFriesFactory.getSnack();
+            frenchFries.create();
         }
     }
 }
