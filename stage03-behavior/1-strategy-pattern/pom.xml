@@ -5,35 +5,16 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.hxl.design.pattern</groupId>
-        <artifactId>design-pattern</artifactId>
+        <artifactId>behavior</artifactId>
         <version>1.0.1</version>
     </parent>
 
-    <packaging>pom</packaging>
-
-    <artifactId>struct</artifactId>
-
-    <modules>
-        <module>1-proxy-pattern</module>
-    </modules>
+    <artifactId>strategy-pattern</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-    </dependencies>
 
 </project>

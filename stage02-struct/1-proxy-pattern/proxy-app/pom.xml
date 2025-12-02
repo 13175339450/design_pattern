@@ -5,17 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.hxl.design.pattern</groupId>
-        <artifactId>design-pattern</artifactId>
+        <artifactId>proxy-pattern</artifactId>
         <version>1.0.1</version>
     </parent>
 
-    <packaging>pom</packaging>
-
-    <artifactId>struct</artifactId>
-
-    <modules>
-        <module>1-proxy-pattern</module>
-    </modules>
+    <artifactId>proxy-app</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -25,15 +19,26 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <groupId>com.hxl.design.pattern</groupId>
+            <artifactId>static-proxy</artifactId>
+            <version>1.0.1</version>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <groupId>com.hxl.design.pattern</groupId>
+            <artifactId>dynamic-proxy</artifactId>
+            <version>1.0.1</version>
         </dependency>
     </dependencies>
+
+    <!-- TODO: SpringBoot 打包重写功能，它能将子模块的类文件打包进当前模块的 JAR 中 -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
